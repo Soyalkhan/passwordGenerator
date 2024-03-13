@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="header">
+            <h1>Instantly generate a secure, random password! </h1>
+        </div>
+        <div class="passwordArea">
+            <div class="di">
+                <input type="text" id="password" disabled>
+                <button id="copy_btn"><img id="clip-img" src="./copy.png" alt="copy"></button>
+                <button id="regenerate_btn"><img id="clip-img" src="./reload.png" alt="reloading"></button>
+            </div>
+            <div class="content">
+                <h1 class="hr-tx">Customize your password</h1>
+                <hr>
+
+                <div class="select-option">
+                    <input type="checkbox" id="Upper" checked>
+                    <p>Upper case</p>
+                    <input type="checkbox" id="Lower" checked>
+                    <p>Lower case</p>
+                    <input type="checkbox" id="Num" checked>
+                    <p>Number</p>
+                    <input type="checkbox" id="sym" checked>
+                    <p>Symbol</p> <br>
+                    <!-- <input type="range"> -->
+
+                </div>
+                <div class="range">
+                    <div class="length"></div>
+                   <p>Password Length: </p> <h1 class="val"></h1>
+                    <input type="range" min="6" max="16" value="8" class="slider" id="myrange">
+                </div>
+                <button class="generate">Generate</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
